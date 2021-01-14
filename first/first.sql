@@ -20,7 +20,7 @@ create table locations(
 create table services(
     services_id int not null primary key,
     name varchar(50) not null,
-    tavern int foreign key references tavern(tavern_id) not null,
+    tavern int foreign key references taverns(tavern_id) not null,
     status int foreign key references status(status_id) not null
 );
 
@@ -37,8 +37,8 @@ create table products(
 
 create table orders(
     order_id int primary key,
-    tavern int foreign key references taverns(tav_id) not null,
-    product int foreign key references products(pro_id) not null,
+    tavern int foreign key references taverns(tavern_id) not null,
+    product int foreign key references products(product_id) not null,
     quantity int,
     ordered date
 );
