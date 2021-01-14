@@ -32,7 +32,7 @@ create table status(
 create table products(
     product_id int primary key,
     product varchar(50) not null,
-    price decminal(10,2) not null
+    price money not null
 );
 
 create table orders(
