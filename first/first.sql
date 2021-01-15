@@ -4,7 +4,7 @@ create database taverns;
 
 create table taverns(
     tavern_id int not null primary key,
-    name varchar(50) not null
+    name varchar(50) not null,
     location int foreign key references locations(location_id) not null,
     services int foreign key references services(services_id) not null
 );
@@ -30,13 +30,13 @@ create table status(
 );
 
 create table products(
-    product_id int primary key,
+    product_id int not null primary key,
     product varchar(50) not null,
     price money not null
 );
 
 create table orders(
-    order_id int primary key,
+    order_id int not null primary key,
     tavern int foreign key references taverns(tavern_id) not null,
     product int foreign key references products(product_id) not null,
     quantity int,
