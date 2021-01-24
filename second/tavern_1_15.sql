@@ -5,32 +5,33 @@ CREATE DATABASE taverns;
 USE taverns;
 
 CREATE TABLE locations(
-    location_id int auto_increment not null,
-    address int not null,
-    street varchar(50) not null,
-    city varchar(50) not null,
-    state varchar(2) not null,
+    location_id INT AUTO_INCREMENT,
+    address INT NOT NULL,
+    street VARCHAR(50) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    state VARCHAR(2) NOT NULL,
     PRIMARY KEY(location_id)
 );
 
-create table taverns(
-	tavern_id int auto_increment primary key,
-	name varchar(50) not null,
-	location int  not null,
+CREATE TABLE taverns(
+	tavern_id INT AUTO_INCREMENT,
+	name VARCHAR(50) NOT NULL,
+	location INT NOT NULL,
+	PRIMARY KEY(tavern_id),
 	FOREIGN KEY(location) references locations(location_id)
 );
 
-create table guest_status(
-	status_id int auto_increment not null,
-	name varchar(50) not null,
+CREATE TABLE  guest_status(
+	status_id INT AUTO_INCREMENT,
+	name VARCHAR(50) NOT NULL,
 	PRIMARY KEY(status_id)
 );
 
 
 CREATE TABLE guests(
-	guest_id INT AUTO_INCREMENT NOT NULL,
+	guest_id INT AUTO_INCREMENT,
 	name VARCHAR(50),
-	notes VARCHAR(50),
+	notes VARCHAR(100),
 	status INT NULL,
 	birthday DATE NOT NULL,
 	cakeday DATE NOT NULL,
@@ -46,10 +47,34 @@ CREATE TABLE classes(
 );
 
 CREATE TABLE levels(
-	level_id INT NOT NULL,
-    guest INT NOT NULL,
+	level_id INT AUTO_INCREMENT,
+	guest INT NOT NULL,
     class INT NOT NULL,
+    level INT NOT NULL,
     PRIMARY KEY(level_id),
     FOREIGN KEY(guest) REFERENCES guests(guest_id),
     FOREIGN KEY(class) REFERENCES classes(class_id)
 );
+
+CREATE TABLE products(
+	product_id INT AUTO_INCREMENT,
+	name VARCHAR(50) NOT NULL,
+	cost FLOAT NOT NULL,
+	PRIMARY KEY(product_id)
+);
+
+CREATE TABLE supplies(
+	supply_id INT AUTO_INCREMENT,
+	name INT NOT NULL,
+	quantity INT NOT NULL,
+	tavern INT NOT NULL,
+	PRIMARY KEY(supply_id),
+	FOREIGN KEY(name) REFERENCES products(product_id),
+	FOREIGN KEY (tavern) REFERENCES taverns(tavern_id)
+);
+
+/*
+ ALTER TABLE taverns(
+	 ADD PRIMARY KEY (tavern_id)
+ )
+ */
