@@ -18,7 +18,7 @@ CREATE TABLE taverns(
 	name VARCHAR(50) NOT NULL,
 	location INT NOT NULL,
 	PRIMARY KEY(tavern_id),
-	FOREIGN KEY(location) references locations(location_id)
+	FOREIGN KEY(location) REFERENCES locations(location_id)
 );
 
 CREATE TABLE  guest_status(

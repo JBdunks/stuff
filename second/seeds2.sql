@@ -30,4 +30,4 @@ INSERT into classes (name) VALUES ('Priest'), ('Knight'), ('Rogue'), ('Wizard'),
 
 -- levels table
 
-INSERT into levels (guest, class, level) VALUES (1, 1, 12), (2, 11, 99), (3, 5, 85), (3, 2, 85) (4, 8, 54), (5, 3, 27), (6, 12, 67);
+INSERT into levels (guest, class, level) VALUES (1, 1, 12), (2, 11, 99), (3, 5, 85), (3, 2, 85), (4, 8, 54), (5, 3, 27), (6, 12, 67);
