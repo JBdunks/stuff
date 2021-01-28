@@ -73,8 +73,17 @@ CREATE TABLE supplies(
 	FOREIGN KEY (tavern) REFERENCES taverns(tavern_id)
 );
 
-/*
- ALTER TABLE taverns(
-	 ADD PRIMARY KEY (tavern_id)
- )
- */
+CREATE TABLE room_status(
+	room_status_id INT AUTO_INCREMENT,
+	status VARCHAR(50) NOT NULL,	
+	PRIMARY KEY (room_status_id)
+);
+
+CREATE TABLE rooms(
+	room_id INT AUTO_INCREMENT,
+	name VARCHAR(50) NOT NULL,
+	cost INT NOT NULL,
+	tavern INT NOT NULL,
+	PRIMARY KEY (room_id),
+	FOREIGN KEY (tavern) REFERENCES taverns(tavern_id)
+);
