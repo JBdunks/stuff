@@ -1,0 +1,30 @@
+.game_btn{
+    height: 110px;
+    width: 110px;
+    background-size: cover;
+    border-style:inset;
+    border-width:3px;
+    margin-right:25px;
+    transform-origin: 0 0;
+    transition: transform .25s, visibility .25s ease-in;
+}
+.game_btn:hover{
+    border-color:tomato;
+    transform: scale(1.25);
+    
+}
+
+
+#rock{
+    background-image: url('./images/rock_rps.png');
+}
+
+#paper{
+    background-image: url('./images/paper_rps.png');
+}
+
+#scissors{
+    background-image: url('./images/scissors_rps.png')
+}
+
+

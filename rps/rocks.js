@@ -35,6 +35,7 @@ const scissors = () =>{
     counter ++
 };
 
+/*
 const start = ()=>{
      game = parseInt(prompt('How many games would you like to play?'),10)
      console.log(typeof game)
@@ -42,4 +43,4 @@ const start = ()=>{
 }
 
 start()
-
+*/
