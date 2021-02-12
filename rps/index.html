@@ -9,11 +9,17 @@
 </head>
 <body>
     <p>choose one:</p>
-
-    <button class = 'game_btn' id = 'rock' onclick= 'rock()' ></button>
-    <button class = 'game_btn' id = 'paper' onclick= 'paper()'></button>
-    <button class = 'game_btn' id = 'scissors' onclick= 'scissors()'></button>
-
+    <div id ='game_area'>
+        <button class = 'game_btn' id = 'rock' onclick= 'rock()' ></button>
+        <button class = 'game_btn' id = 'paper' onclick= 'paper()'></button>
+        <button class = 'game_btn' id = 'scissors' onclick= 'scissors()'></button>
+    </div>
+    <div>
+        <p>game result: <span id ='result'></span></p>
+    </div>
+    <div>
+        <div>User score: <span id = 'user_score'></span></div>
+    </div>
     <script src="rocks.js"></script>
 </body>
 </html>
