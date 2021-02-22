@@ -1,5 +1,5 @@
 console.log('loaded')
-const choices = [null, 'rock', 'paper', 'scissors']
+const choices = [null, 'rock', 'paper', 'scissors'];
 var user;
 var computer;
 var game;
@@ -49,3 +49,4 @@ const start = ()=>{
 
 start()
 */
+console.log(eval(1234+4321))
