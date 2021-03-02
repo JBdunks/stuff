@@ -11,14 +11,13 @@
     <div id = 'input_box'>
         <p> <span>first number</span> <span>second number</span> </p>
             <input type= 'text' id = 'first' autofocus>
-      
 
             <input type= 'text' id = 'second'>
         
     </div>
     <div id = 'radio_btns'>
         <label for="add">
-            <input id="add" value="add" type="radio" name="operand">Add
+            <input id="add" value="add" type="radio" name="operand" onclick = 'select()'>Add
         </label>
         <label for="subtract">
             <input id="subtract" value="subtract" type="radio" name="operand">Subtract
@@ -31,8 +30,8 @@
         </label>
     </div>
     <div id = 'submit'>
-        <button id = 'equal'>=</button>
-        <button id = 'clear'>Clear</button>
+        <button id = 'equal' onclick = 'main()'>=</button>
+        <button id = 'clear' onclick = 'reload()'>Clear</button>
     </div>
 
     <div id = 'results'>this is where the results will go</div>

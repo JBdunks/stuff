@@ -8,18 +8,19 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <p>choose one:</p>
+    <p id = 'choose'>Choose One</p>
     <div id ='game_area'>
-        <button class = 'game_btn' id = 'rock' onclick= 'rock()' ></button>
-        <button class = 'game_btn' id = 'paper' onclick= 'paper()'></button>
-        <button class = 'game_btn' id = 'scissors' onclick= 'scissors()'></button>
+        <button class = 'game_btn' id = 'rock' onclick = 'rock()' disabled = true></button>
+        <button class = 'game_btn' id = 'paper' onclick = 'paper()' disabled = true></button>
+        <button class = 'game_btn' id = 'scissors' onclick = 'scissors()' disabled = true></button>
     </div>
     <div>
-        <p>game result: <span id ='result'></span></p>
+        <p><span id ='result'></span></p>
     </div>
     <div>
-        <div>User score: <span id = 'user_score'></span></div>
+        <div><span id = 'user_score'></span></div>
     </div>
+    <button id = 'start_btn' onclick = 'start()'>Start</button>
     <script src="rocks.js"></script>
 </body>
 </html>

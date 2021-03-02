@@ -1,6 +1,14 @@
 #game_area{
     margin-bottom:22px;
 }
+body{
+    padding-top:40px;
+    text-align: center;
+}
+
+#choose{
+    font-size:25px;
+}
 
 .game_btn{
     height: 110px;
@@ -12,12 +20,28 @@
     transform-origin: 0 0;
     transition: transform .25s, visibility .25s ease-in;
 }
+
+#start_btn{
+    background-color:tomato;
+    color:white;
+    border:none;
+    border-radius: 25px;
+    width:100px;  
+}
+
+#game_area{
+    padding-bottom:10px;
+}
+
 .game_btn:hover{
     border-color:tomato;
     transform: scale(1.25);
     
 }
 
+#result{
+    text-align:left;
+}
 
 #rock{
     background-image: url('./images/rock_rps.png');
